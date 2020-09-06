@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="menus")
-public class Menu extends BaseTimeEntity {
+public class Menus extends BaseTimeEntity {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -20,7 +20,7 @@ public class Menu extends BaseTimeEntity {
 	
 	@ManyToOne
 	@JoinColumn(name="type")
-	private MenuType menuType;
+	private MenuTypes menuType;
 	
 	public Long getId() {
 		return id;
@@ -34,10 +34,10 @@ public class Menu extends BaseTimeEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public MenuType getMenuType() {
+	public MenuTypes getMenuType() {
 		return menuType;
 	}
-	public void setMenuType(MenuType menuType) {
+	public void setMenuType(MenuTypes menuType) {
 		this.menuType = menuType;
 	}
 }
