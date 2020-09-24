@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="menus")
-public class Menus extends BaseTimeEntity {
+public class Menu extends BaseTimeEntity {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
